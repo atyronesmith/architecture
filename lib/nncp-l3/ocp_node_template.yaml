@@ -29,10 +29,10 @@ spec:
         state: up
         type: linux-bridge
         mtu: 1500
-      - description: ctlplane bridge
-        name: ospbr
+      - description: ctlplane interface
+        name: _replaced_
         state: up
-        type: linux-bridge
+        type: ethernet
         mtu: 1500
         ipv4:
           enabled: false

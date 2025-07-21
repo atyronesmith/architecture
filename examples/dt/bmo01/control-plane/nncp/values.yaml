@@ -84,7 +84,7 @@ data:
         "cniVersion": "0.3.1",
         "name": "ctlplane",
         "type": "macvlan",
-        "master": "ospbr",
+        "master": "enp6s0",
         "ipam": {
           "type": "whereabouts",
           "range": "192.168.122.0/24",
@@ -322,8 +322,8 @@ data:
       {
         "cniVersion": "0.3.1",
         "name": "datacentre",
-        "type": "bridge",
-        "bridge": "ospbr",
+        "type": "macvlan",
+        "master": "enp6s0",
         "ipam": {}
       }
 
@@ -343,11 +343,11 @@ data:
       - destination: 192.168.123.0/24
         metric: 150
         next-hop-address: 192.168.122.1
-        next-hop-interface: ospbr
+        next-hop-interface: enp6s0
       - destination: 192.168.124.0/24
         metric: 150
         next-hop-address: 192.168.122.1
-        next-hop-interface: ospbr
+        next-hop-interface: enp6s0
       # internalapi
       - destination: 172.17.1.0/24
         metric: 150
@@ -387,4 +387,3 @@ data:
 
   lbServiceType: LoadBalancer
   storageClass: lvms-local-storage
-  bridgeName: ospbr

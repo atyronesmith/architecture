@@ -34,7 +34,7 @@ data:
   ovn:
     ovnController:
       nicMappings:
-        datacentre: ospbr
+        datacentre: enp6s0
   telemetry:
     enabled: true
     template:

@@ -152,7 +152,7 @@ data:
       - 100.64.10.1
     loopback_ip: 99.99.10.2
     loopback_ipv6: f00d:f00d:f00d:f00d:f00d:f00d:f00d:43
-    base_if: enp6s0
+    base_if: enp7s0
     routes:
       config:
         - destination: 192.168.133.0/24
@@ -669,8 +669,8 @@ data:
       {
         "cniVersion": "0.3.1",
         "name": "datacentre",
-        "type": "bridge",
-        "bridge": "ospbr",
+        "type": "macvlan",
+        "master": "enp6s0",
         "ipam": {}
       }
 
@@ -698,4 +698,3 @@ data:
 
   lbServiceType: LoadBalancer
   storageClass: local-storage
-  bridgeName: ospbr

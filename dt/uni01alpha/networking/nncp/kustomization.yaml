@@ -198,7 +198,7 @@ patches:
           destination: _replaced_
           metric: 150
           next-hop-address: _replaced_
-          next-hop-interface: ospbr
+          next-hop-interface: enp6s0
 
   - target:
       kind: NodeNetworkConfigurationPolicy

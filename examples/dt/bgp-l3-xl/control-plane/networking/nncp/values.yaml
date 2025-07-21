@@ -851,8 +851,8 @@ data:
       {
         "cniVersion": "0.3.1",
         "name": "datacentre",
-        "type": "bridge",
-        "bridge": "ospbr",
+        "type": "macvlan",
+        "master": "enp6s0",
         "ipam": {}
       }
 
@@ -880,4 +880,3 @@ data:
 
   lbServiceType: LoadBalancer
   storageClass: local-storage
-  bridgeName: ospbr
